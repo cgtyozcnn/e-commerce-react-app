@@ -25,11 +25,11 @@
     .orders-link {
       text-decoration: none;
       color: var(--gray);
-     
+     display: flex;
       padding-top: 10px;
       padding-bottom: 10px;
       padding-left: 10px;
-      label {
+      p {
         cursor: pointer;
         margin-left: 5px;
         color:var(--white)

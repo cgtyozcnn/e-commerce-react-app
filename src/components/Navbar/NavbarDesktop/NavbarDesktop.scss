@@ -40,7 +40,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
-    label {
+    display: flex;
+    p {
       cursor: pointer;
       margin-left: 5px;
     }

@@ -6,13 +6,14 @@ import "./Cart.scss";
 import CartItem from "./CartItem/CartItem";
 import * as cartActions from "../../store/actions/cart";
 import * as ordersActions from "../../store/actions/orders";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 const Cart = (props) => {
-  const cart = useSelector((state) => state.cart.cart);
+
   let totalQuantities = 0;
   let totalAmount = 0;
+  
   const cartArray = [];
+  const cart = useSelector((state) => state.cart.cart);
   for (let key in cart) {
     totalQuantities += parseInt(cart[key].quantity);
     totalAmount += parseInt(cart[key].quantity) * cart[key].price;
@@ -54,10 +55,10 @@ const Cart = (props) => {
           </div>
 
           <div className="cart-bottom">
-            <label>
+            <p>
               <strong>Total Amount:</strong>
               {totalAmount.toFixed(2)} &#36;
-            </label>
+            </p>
             <div className="cart-buttons">
               <button
                 className="btn btn-orange"

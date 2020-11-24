@@ -22,7 +22,7 @@ const SearchInput = (props) => {
       </div>
       {props.errorLabel !== "" && (
         <div className="error-label">
-          <label>{props.errorLabel}</label>
+          <p>{props.errorLabel}</p>
         </div>
       )}
     </div>

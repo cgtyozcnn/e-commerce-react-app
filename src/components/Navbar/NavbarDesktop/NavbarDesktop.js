@@ -31,15 +31,15 @@ const NavbarDesktop = (props) => {
             <div className="ProfilContainer">
               <NavLink to="/orders" className="orders-link">
                 <StorageOutlinedIcon fontSize="medium" />
-                <label>Orders</label>
+                <p>Orders</p>
               </NavLink>
               <NavLink to="/" className="orders-link">
                 <AccountBoxOutlinedIcon fontSize="medium" />
-                <label>User Information</label>
+                <p>User Information</p>
               </NavLink>
               <NavLink to="/" className="orders-link">
                 <SettingsOutlinedIcon fontSize="medium" />
-                <label>Settings</label>
+                <p>Settings</p>
               </NavLink>
             </div>
           </Dropdown>

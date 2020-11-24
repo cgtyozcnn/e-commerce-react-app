@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "./NavbarMobile.scss";
 import { NavLink } from "react-router-dom";
 
@@ -32,7 +32,7 @@ const NavbarMobile = (props) => {
               onClick={() => setClicked((prevState) => !prevState)}
             >
               <StorageOutlinedIcon fontSize="medium" />
-              <label>Orders</label>
+              <p>Orders</p>
             </NavLink>
             <NavLink
               to="/"
@@ -40,7 +40,7 @@ const NavbarMobile = (props) => {
               onClick={() => setClicked((prevState) => !prevState)}
             >
               <AccountBoxOutlinedIcon fontSize="medium" />
-              <label>User Information</label>
+              <p>User Information</p>
             </NavLink>
             <NavLink
               to="/"
@@ -51,7 +51,7 @@ const NavbarMobile = (props) => {
                 fontSize="medium"
                 onClick={() => setClicked((prevState) => !prevState)}
               />
-              <label>Settings</label>
+              <p>Settings</p>
             </NavLink>
           </div>
         </div>

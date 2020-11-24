@@ -23,18 +23,18 @@ const OrderList = (props) => {
     <Card>
       <div className="OrderBody">
         <div className="OrderTop">
-          <label>
+          <p>
             <strong>Order Number: </strong>
             {props.data.id}
-          </label>
-          <label>
+          </p>
+          <p>
             <strong>Ordered Date: </strong>
             {`${da}-${mo}-${ye}`}
-          </label>
-          <label>
+          </p>
+          <p>
             <strong>Amount: </strong>
             {props.data.totalAmount} &#36;
-          </label>
+          </p>
         </div>
         <div className="OrderBottom">
           <button

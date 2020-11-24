@@ -14,7 +14,7 @@ const ProductItem = (props) => {
     dispatch(cartActions.addToCart(props.data, 1));
   };
   return (
-    <Card classes="ProductContainer">
+    <Card classes="ProductContainer" >
       <picture>
         <source media="(min-width:650px)" srcSet={productImage2x} />
         <source media="(min-width:465px)" srcSet={productImage} />
@@ -26,11 +26,11 @@ const ProductItem = (props) => {
       </picture>
 
       <div className="product-body">
-        <label className="product-name">{props.data.name}</label>
-        <label className="product-price">
+        <p className="product-name">{props.data.name}</p>
+        <p className="product-price">
           <strong>Price: </strong>
           {props.data.price} &#36;
-        </label>
+        </p>
         <div className="ProductButtonsContainer">
           <button
             className="btn btn-orange"
