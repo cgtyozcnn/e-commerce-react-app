@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Search from "../../../assets/img/svg/search.svg";
+import SearchIcon from '@material-ui/icons/Search';
 import "./SearchInput.scss";
 const SearchInput = (props) => {
   const [isValid, setIsValid]=useState(true)
@@ -17,7 +17,7 @@ const SearchInput = (props) => {
       <div className="search-input">
         <input placeholder={props.placeHolder} onChange={changeHandler} />
         <button className="search-button">
-          <img src={Search} alt="search" />
+          <SearchIcon/>
         </button>
       </div>
       {props.errorLabel !== "" && (
