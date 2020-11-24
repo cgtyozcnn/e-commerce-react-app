@@ -14,14 +14,10 @@
       justify-content: center;
       align-items: center;
 
-      /* max-width: 600px; */
       object-fit: contain;
       width: 100%;
-      max-width: 600px;
-      //  ** yüksekliği max 200px olabiliyor. Yüklekliğe göre resmi düzenliyor.
-      //   max-height: 200px;
-      //   width: 100%;
-      //   object-fit: contain;
+      // max-width: 600px;
+      max-height: 300px;
     }
   }
   .ProductInfoContainer {
@@ -69,7 +65,7 @@
     flex-direction: column;
 
     .ProductInfoContainer {
-      margin-left:0 !important
+      margin-left: 0 !important;
     }
   }
   .ProductButtonsContainer {
