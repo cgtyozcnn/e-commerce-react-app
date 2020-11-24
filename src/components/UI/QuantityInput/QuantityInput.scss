@@ -1,0 +1,13 @@
+.ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  .quantity-input {
+    display: flex;
+    flex: 1;
+  }
+}
+@media screen and (max-width: 300px) {
+  .ButtonContainer {
+    flex-direction: column;
+  }
+}

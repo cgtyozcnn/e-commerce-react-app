@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;900&display=swap");
+
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
+$theme-colors: (
+  "primary": #044dc3,
+  "success": #51b549,
+  "danger": #ff0000,
+  "lighter": #e6e6e6,
+  "dark-lighter": #bdbaba,
+  "light-pink": #ffeae8,
+  "light-turquoise": #e8f1ff,
+  "light-green": #e2f7e1,
+  "orange": #ef7752,
+  "white": #fff,
+);
+
+body {
+  min-height: 100vh;
+}
+svg {
+  color: var(--orange);
+}
+@import "~bootstrap/scss/bootstrap";

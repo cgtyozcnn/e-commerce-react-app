@@ -1,0 +1,83 @@
+.product-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  flex: 1;
+  .ProductImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .product-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* max-width: 600px; */
+      object-fit: contain;
+      width: 100%;
+      max-width: 600px;
+      //  ** yüksekliği max 200px olabiliyor. Yüklekliğe göre resmi düzenliyor.
+      //   max-height: 200px;
+      //   width: 100%;
+      //   object-fit: contain;
+    }
+  }
+  .ProductInfoContainer {
+    display: flex;
+    flex-direction: column;
+
+    // flex: 1;
+    margin-left: 10px;
+    padding: 10px;
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 20px;
+    }
+  }
+  .ProductButtonsContainer {
+    display: flex;
+    margin-top: 15px;
+    button {
+      &:hover {
+        color: var(--white);
+      }
+    }
+    a {
+      flex: 1;
+      margin: 5px;
+      font-size: 16px;
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+    .btn-orange {
+      color: var(--white);
+      margin-left: 5px;
+    }
+    .btn-secondary {
+      border-radius: 0;
+    }
+  }
+}
+@media screen and (max-width: 960px) {
+  .product-body {
+    flex-direction: column;
+
+    .ProductInfoContainer {
+      margin-left:0 !important
+    }
+  }
+  .ProductButtonsContainer {
+    flex-direction: column;
+    flex: 1;
+    .btn-orange {
+      margin-left: 0 !important;
+      margin-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.Navbar {
+  background-color: var(--white);
+  height: 110px;
+  border-bottom: 2px solid var(--orange);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar-logo {
+  flex: 0.7;
+  a {
+    color: var(--orange);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+.nav-menu-items {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex: 0.5;
+
+  .nav-menu-item {
+    margin: 5px;
+    position: relative;
+  }
+}
+.ProfilContainer {
+  display: flex;
+  flex-direction: column;
+
+  .orders-link {
+    text-decoration: none;
+    color: var(--gray);
+    border-bottom: 1px solid var(--lighter);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    label {
+      cursor: pointer;
+      margin-left: 5px;
+    }
+    &:hover{
+      background-color:var(--lighter);
+    }
+  }
+}

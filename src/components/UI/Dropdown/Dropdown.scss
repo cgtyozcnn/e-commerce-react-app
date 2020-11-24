@@ -1,0 +1,29 @@
+.Dropdown {
+  position: relative;
+  :hover {
+    .DropdownContainer {
+      display: block;
+    }
+  }
+  &:hover {
+    .DropdownContainer {
+      display: block;
+    }
+  }
+  .DropdownContainer {
+    font-weight: 300;
+    text-transform: none;
+    display: none;
+    position: absolute;
+    width: 300px;
+    background-color: var(--white);
+    right: 0;
+
+    box-shadow: 0 0 12px 0 rgba(243, 69, 0, 0.6);
+  }
+  @media screen and (max-width: 960px) {
+    .DropdownContainer {
+      right: -15px;
+    }
+  }
+}

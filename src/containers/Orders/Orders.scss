@@ -1,0 +1,31 @@
+.OrderEmptyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 250px 0px;
+  margin: auto;
+  h5 {
+    color: var(--dark-lighter);
+  }
+}
+.OrderContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin:auto;
+  padding-top: 20px;
+
+}
+@media screen and (max-width: 960px) {
+  .OrderContainer {
+    width: 85%;
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .OrderContainer {
+    width: 95%;
+  }
+}

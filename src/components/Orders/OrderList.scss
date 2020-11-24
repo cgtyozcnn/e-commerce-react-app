@@ -1,0 +1,28 @@
+.OrderBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.OrderTop {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  padding: 10px;
+
+  label {
+    padding: 10px;
+    margin-bottom: 0px;
+  }
+}
+
+.OrderBottom {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid var(--lighter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
