@@ -22,7 +22,6 @@ const ProductList = (props) => {
               <ProductItem
                 key={product.id}
                 data={product}
-              
               />
             </div>
           ))}
