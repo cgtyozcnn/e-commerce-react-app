@@ -1,0 +1,30 @@
+.LoginContainer {
+  padding: 50px 10px;
+  .login-body {
+    display: flex;
+    padding: 20px;
+    h4 {
+      text-align: center;
+      color: var(--orange);
+      margin: 10px;
+    }
+    p {
+      text-align: center;
+      color: var(--dark-lighter);
+      margin-top: 10px;
+      a {
+        color: var(--orange);
+        cursor: pointer;
+      }
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+.form-button {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+  outline: none !important;
+}
+

@@ -20,4 +20,15 @@ body {
 svg {
   color: var(--orange);
 }
+.btn-orange {
+  color: var(--white) !important;
+}
+.loading-progress {
+  svg {
+    color: var(--white) !important;
+  }
+
+  width: 24px !important;
+  height: 24px !important;
+}
 @import "~bootstrap/scss/bootstrap";

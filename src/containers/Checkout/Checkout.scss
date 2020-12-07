@@ -1,0 +1,51 @@
+.CheckoutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 10px;
+    h4 {
+      color: var(--orange);
+    }
+    p {
+      margin-bottom: 0 !important;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      .credit-card-body {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid var(--lighter);
+        &input {
+          border: 1px solid;
+        }
+      }
+    }
+    .summary-info {
+      height: 100%;
+      button {
+        width: 100%;
+      }
+      .purchase-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .divider {
+        border-top: 1px solid var(--lighter);
+      }
+    }
+  }
+  .CardElementContainer {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    .StripeElement {
+      border: 1px solid var(--lighter);
+      border-radius: 10px;
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  

@@ -9,7 +9,11 @@ import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined"
 import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import AccountBoxOutlinedIcon from "@material-ui/icons/AccountBoxOutlined";
 import StorageOutlinedIcon from "@material-ui/icons/StorageOutlined";
+import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
+import { useSelector } from "react-redux";
 const NavbarDesktop = (props) => {
+  const loggedInUser = useSelector((state) => state.auth.userId);
+  console.log(loggedInUser);
   return (
     <nav className="Navbar d-flex justify-content-around align-items-center ">
       <h2 className="navbar-logo">
@@ -27,21 +31,40 @@ const NavbarDesktop = (props) => {
       <SearchProduct />
       <ul className="nav-menu-items">
         <li className="nav-menu-item d-flex">
-          <Dropdown element={<AccountCircleOutlinedIcon fontSize="large" />}>
-            <div className="ProfilContainer">
-              <NavLink to="/orders" className="orders-link">
-                <StorageOutlinedIcon fontSize="medium" />
-                <p>Orders</p>
-              </NavLink>
-              <NavLink to="/" className="orders-link">
-                <AccountBoxOutlinedIcon fontSize="medium" />
-                <p>User Information</p>
-              </NavLink>
-              <NavLink to="/" className="orders-link">
-                <SettingsOutlinedIcon fontSize="medium" />
-                <p>Settings</p>
-              </NavLink>
-            </div>
+          <Dropdown
+            element={
+              <div className="d-flex flex-column justify-content-center align-items-center ">
+                <AccountCircleOutlinedIcon fontSize="large" />
+                {loggedInUser ? (
+                  <p className="login-info">Demo User</p>
+                ) : (
+                  <NavLink to="/login" className="login-info">
+                    Login/Signup
+                  </NavLink>
+                )}
+              </div>
+            }
+          >
+            {loggedInUser && (
+              <div className="ProfilContainer">
+                <NavLink to="/orders" className="orders-link">
+                  <StorageOutlinedIcon fontSize="medium" />
+                  <p>Orders</p>
+                </NavLink>
+                <NavLink to="/" className="orders-link">
+                  <AccountBoxOutlinedIcon fontSize="medium" />
+                  <p>User Information</p>
+                </NavLink>
+                <NavLink to="/" className="orders-link">
+                  <SettingsOutlinedIcon fontSize="medium" />
+                  <p>Settings</p>
+                </NavLink>
+                <NavLink to="/logout" className="orders-link">
+                  <PowerSettingsNewIcon fontSize="medium" />
+                  <p>Log out</p>
+                </NavLink>
+              </div>
+            )}
           </Dropdown>
         </li>
         <li className="nav-menu-item d-flex">

@@ -5,16 +5,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import productsReducer from "./store/reducers/products";
-import cartReducer from './store/reducers/cart'
-import ordersReducer from './store/reducers/orders'
+import cartReducer from "./store/reducers/cart";
+import ordersReducer from "./store/reducers/orders";
+import authReducer from './store/reducers/auth'
 const rootReducer = combineReducers({
   products: productsReducer,
-  cart:cartReducer,
-  orders:ordersReducer
+  cart: cartReducer,
+  orders: ordersReducer,
+  auth:authReducer
 });
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>

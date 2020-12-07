@@ -6,9 +6,12 @@ import SearchProduct from "../../Products/SearchProduct";
 import Cart from "../../Cart/Cart";
 import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import AccountBoxOutlinedIcon from "@material-ui/icons/AccountBoxOutlined";
+import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import StorageOutlinedIcon from "@material-ui/icons/StorageOutlined";
+import { useSelector } from "react-redux";
 const NavbarMobile = (props) => {
   const [clicked, setClicked] = useState(false);
+  const loggedInUser = useSelector((state) => state.auth.userId);
   return (
     <nav className="NavbarMobile d-flex flex-column">
       <div className="navbar-mobil-top d-flex justify-content-around align-items-center ">
@@ -25,35 +28,52 @@ const NavbarMobile = (props) => {
               : "nav-mobile-menu-items"
           }`}
         >
-          <div className="SlidebarContainer">
-            <NavLink
-              to="/orders"
-              className="orders-link"
-              onClick={() => setClicked((prevState) => !prevState)}
-            >
-              <StorageOutlinedIcon fontSize="medium" />
-              <p>Orders</p>
-            </NavLink>
-            <NavLink
-              to="/"
-              className="orders-link"
-              onClick={() => setClicked((prevState) => !prevState)}
-            >
-              <AccountBoxOutlinedIcon fontSize="medium" />
-              <p>User Information</p>
-            </NavLink>
-            <NavLink
-              to="/"
-              className="orders-link"
-              onClick={() => setClicked((prevState) => !prevState)}
-            >
-              <SettingsOutlinedIcon
-                fontSize="medium"
+          {loggedInUser ? (
+            <div className="SlidebarContainer">
+              <NavLink
+                to="/orders"
+                className="orders-link"
                 onClick={() => setClicked((prevState) => !prevState)}
-              />
-              <p>Settings</p>
-            </NavLink>
-          </div>
+              >
+                <StorageOutlinedIcon fontSize="medium" />
+                <p>Orders</p>
+              </NavLink>
+              <NavLink
+                to="/"
+                className="orders-link"
+                onClick={() => setClicked((prevState) => !prevState)}
+              >
+                <AccountBoxOutlinedIcon fontSize="medium" />
+                <p>User Information</p>
+              </NavLink>
+              <NavLink
+                to="/"
+                className="orders-link"
+                onClick={() => setClicked((prevState) => !prevState)}
+              >
+                <SettingsOutlinedIcon fontSize="medium" />
+                <p>Settings</p>
+              </NavLink>
+              <NavLink
+                to="/logout"
+                className="orders-link"
+                onClick={() => setClicked((prevState) => !prevState)}
+              >
+                <PowerSettingsNewIcon fontSize="medium" />
+                <p>Log out</p>
+              </NavLink>
+            </div>
+          ) : (
+            <div className="SlidebarContainer">
+              <NavLink
+                to="/login"
+                className="login-info"
+                onClick={() => setClicked((prevState) => !prevState)}
+              >
+                Login/Signup
+              </NavLink>
+            </div>
+          )}
         </div>
         <NavLink
           to="/"

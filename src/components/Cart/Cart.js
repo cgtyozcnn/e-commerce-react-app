@@ -5,13 +5,12 @@ import Dropdown from "../UI/Dropdown/Dropdown";
 import "./Cart.scss";
 import CartItem from "./CartItem/CartItem";
 import * as cartActions from "../../store/actions/cart";
-import * as ordersActions from "../../store/actions/orders";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import { NavLink } from "react-router-dom";
 const Cart = (props) => {
-
   let totalQuantities = 0;
   let totalAmount = 0;
-  
+
   const cartArray = [];
   const cart = useSelector((state) => state.cart.cart);
   for (let key in cart) {
@@ -25,9 +24,12 @@ const Cart = (props) => {
     console.log("remove");
     dispatch(cartActions.removeFromCart());
   };
+
   const addOrderHandler = () => {
-    dispatch(ordersActions.addOrder(cart, totalAmount.toFixed(2)));
+    // dispatch(ordersActions.addOrder(cart, totalAmount.toFixed(2)));
+   
   };
+ 
   return (
     <Dropdown
       element={
@@ -72,7 +74,9 @@ const Cart = (props) => {
                 type="submit"
                 onClick={addOrderHandler}
               >
-                Purchase
+                <NavLink to="/checkout" className="purchase-link">
+                  Purchase
+                </NavLink>
               </button>
             </div>
           </div>

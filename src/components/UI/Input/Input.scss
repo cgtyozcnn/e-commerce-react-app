@@ -1,0 +1,27 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .input {
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--lighter);
+    border-radius: 10px;
+    &:focus {
+      box-shadow: 0 0 5px 0 rgba(238, 120, 84, 0.6);
+    }
+  }
+  .error-text {
+    color: var(--danger);
+    font-size: 14px;
+  }
+  .error-input {
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    &:focus {
+      box-shadow: 0 0 5px 0 rgba(247, 34, 34, 0.6);
+    }
+  }
+}

@@ -7,17 +7,21 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADD_ORDER:
       const addOrderData = {
-        id: `EC${new Date().getTime()}`,
+        orderNumber: action.orderData.orderNumber,
         items: action.orderData.items,
-        totalAmount: action.orderData.amount,
+        details: action.orderData.billingDetails,
+        amount: action.orderData.amount,
         date: new Date(),
       };
+
       return {
         ...state,
         orders: state.orders.concat(addOrderData),
       };
     case actionTypes.SET_ORDERS:
-      return state;
+      return {
+        orders: action.orders,
+      };
     default:
       return state;
   }
